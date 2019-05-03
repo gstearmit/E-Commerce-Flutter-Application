@@ -198,6 +198,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         );
       } else {
+
         return new Center(
           child: Column(
             children: <Widget>[
@@ -335,6 +336,8 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         centerTitle: true,
         actions: <Widget>[
+
+          ///FavouriteItems
           new Stack(
             alignment: Alignment.topLeft,
             children: <Widget>[
@@ -369,6 +372,8 @@ class _MyHomePageState extends State<MyHomePage> {
               )
             ],
           ),
+
+          ///  Chat
           new Stack(
             alignment: Alignment.topLeft,
             children: <Widget>[
@@ -392,7 +397,44 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               )
             ],
-          )
+          ),
+
+          /// Cart
+          new Stack(
+            alignment: Alignment.topLeft,
+            children: <Widget>[
+              new IconButton(
+                  icon: new Icon(
+                    Icons.add_shopping_cart,
+                    color: Colors.white,
+                  ),
+                  onPressed: () {
+//                showSnackBar("Opne Favourite", scaffoldKey);
+                    Navigator.of(context).push(new MaterialPageRoute(
+                        builder: (context) =>
+                            FavouriteItems(
+                              storeItems: itemList,
+                              onUnFavouritePressed: (bool state) {
+                                setState(() {
+                                  noOfFav = noOfFav - 1;
+                                });
+                              },
+                            )));
+                  }),
+              Padding(
+                padding: EdgeInsets.all(3.0),
+                child: new CircleAvatar(
+                  radius: 8.0,
+                  backgroundColor: Colors.teal,
+                  child: new Text(
+                    noOfFav.toString(),
+                    style: new TextStyle(color: Colors.white, fontSize: 8.0),
+                  ),
+                ),
+              )
+            ],
+          ),
+
         ],
       ),
       body: getBodyUI(),

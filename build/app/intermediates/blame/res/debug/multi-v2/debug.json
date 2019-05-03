@@ -1,11 +1,19 @@
 {
     "logs": [
         {
-            "outputFile": "/home/hp/Documents/ravi/E-Commerce-Flutter-Application-master/build/app/intermediates/res/merged/debug/values_values.arsc.flat",
+            "outputFile": "C:\\Users\\admin\\E-Commerce-Flutter-Application\\build\\app\\intermediates\\res\\merged\\debug\\values_values.arsc.flat",
             "map": [
                 {
-                    "source": "/home/hp/Documents/ravi/E-Commerce-Flutter-Application-master/android/app/src/main/res/values/styles.xml",
+                    "source": "C:\\Users\\admin\\E-Commerce-Flutter-Application\\android\\app\\src\\main\\res\\values\\styles.xml",
                     "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "57",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "353"
+                    },
+                    "to": {
                         "startLines": "2",
                         "startColumns": "4",
                         "startOffsets": "55",
